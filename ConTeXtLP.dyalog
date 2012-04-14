@@ -5,8 +5,8 @@
       Tangle←{
           ⍺←⊢ ⋄ chunk←⊃⍺ '*' ⋄ in out←⍵
           tie←in⎕NTIE 0
-          pat←'^\\startChunk{\s*(.*[^\s])\s*}\s*\n'
-          pat,←'((?:.|\n)*?)\\endChunk\s*\n'
+          pat←'^\\startchunk{\s*(.*[^\s])\s*}\s*\n'
+          pat,←'((?:.|\n)*?)\\stopchunk\s*\n'
           ns cs←⊂[0]↑(pat⎕S Extract⍠'Mode' 'M') tie
           tie←⎕NUNTIE tie
           ns cs←(⊂ns[sv]),⊂cs[sv←⍋↑ns]
@@ -24,7 +24,7 @@
       
       Resolve←{
           ns cs←⍺ ⋄ body←⍵
-          pat←'/BTEX\\chunkRef{\s*(.*)\s*}/ETEX'
+          pat←'/BTEX\\chunkref{\s*(.*)\s*}/ETEX'
           nbody←(pat⎕R (ns cs∘Subst)⍠'ResultText' 'Simple') body
           nbody≡body: body
           ns cs ∇ nbody

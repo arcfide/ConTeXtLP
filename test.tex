@@ -1,20 +1,36 @@
+\input ConTeXtLPMacros
+
+\definefontsynonym[APL][Apl385]
+\setupbodyfont[xits]
+\definefont[tt][APL sa 1]
+
+
 \starttext
 
-\startChunk{Main}
+\title{Example \ConTeXt{}LP program}
+
+\placecontent
+
+\chapter{Starting out}
+
+Here are some things when we start out.
+
+\defchunk{Main} 
 ⍝ This is a test
 ⎕←'Here are the primes'
-\endChunk
+\stopchunk
 
-This is something that I am not sure will work, but I intend to find 
-out if I can make it work nonetheless.
+This is {\tt something} that I am not sure will work, but I intend
+to find out if I can make it work nonetheless.
 
-\startChunk{Primes less than 50}
+\defchunk{Primes less than 50}
 (2=+⌿0=(⍳X)∘.|⍳X)/⍳X←50
-\endChunk
+\stopchunk
 
-\startChunk{Main   }
-⎕←/BTEX\chunkRef{Primes less than 50}/ETEX
+\defchunk{Main}
+⎕←/BTEX\chunk{Primes less than 50}/ETEX
 I wonder what other things there are.
-\endChunk
+\stopchunk
 
-\endtext
+
+\stoptext
