@@ -1,0 +1,18 @@
+ConTeXtLP: ConTeXt-based, Minimalist Literate Programming
+─────────────────────────────────────────────────────────
+
+This is a minimalist literate programming system focused around the 
+ConTeXt typesetting system.  You write ConTeXt files with a test of 
+basic macros for defining chunks, and then you can extract the code 
+from these documents using the ConTeXtLP.Tangle function.  There is 
+no weaving, as you can just run the context program directly on your 
+files. 
+
+Pretty-printing is provided by the custom pretty printing support in 
+ConTeXt.  Indexing and other features that you would expect from 
+full-featured LP systems like CWEB are provided already by ConTeXt, 
+making this a simple, but very featureful way of doing things.
+
+	Aaron W. Hsu <arcfide@sacrideo.us>
+	<http://www.sacrideo.us>
+	
