@@ -22,10 +22,10 @@
       }
 
       Extract←{
-        1≥⍴⍵.Offsets: ⍬
-        no co←1↓⍵.Offsets
-        nl cl←1↓⍵.Lengths
-        (⍵.Block[no+⍳nl])(⍵.Block[co+⍳cl])
+          1≥⍴⍵.Offsets: ⍬
+          no co←1↓⍵.Offsets
+          nl cl←1↓⍵.Lengths
+          (⍵.Block[no+⍳nl])(⍵.Block[co+⍳cl])
       }
       
       Resolve←{
