@@ -1,0 +1,20 @@
+\starttext
+
+\startChunk{Main}
+⍝ This is a test
+⎕←'Here are the primes'
+\endChunk
+
+This is something that I am not sure will work, but I intend to find 
+out if I can make it work nonetheless.
+
+\startChunk{Primes less than 50}
+(2=+⌿0=(⍳X)∘.|⍳X)/⍳X←50
+\endChunk
+
+\startChunk{Main   }
+⎕←/BTEX\chunkRef{Primes less than 50}/ETEX
+I wonder what other things there are.
+\endChunk
+
+\endtext
