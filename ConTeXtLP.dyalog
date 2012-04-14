@@ -2,12 +2,6 @@
 
     ⎕IO ⎕ML←0 0
 
-    ∇ Main;file;chunk
-      file←(⍴FileMsg)↓⍞⊣⍞←FileMsg←'Enter the name of the file to tangle: '
-      chunk←(⍴ChunkMsg)↓⍞⊣⍞←ChunkMsg←'Enter the name of the chunk to tangle: '
-      chunk Tangle file
-    ∇
-
       Tangle←{
           ⍺←⊢ ⋄ chunk←⊃⍺ '*' ⋄ in out←⍵
           tie←in⎕NTIE 0
